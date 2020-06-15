@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Setup</title>
+            <!-- Font Awesome -->
+            <link rel="stylesheet" href="{{ url_for('static', filename='main/plugins/fontawesome-free/css/all.min.css') }}">
+            <!-- Theme style -->
+            <link rel="stylesheet" href="{{ url_for('static', filename='main/dist/css/adminlte.min.css') }}">
+            <!-- Google Font: Source Sans Pro -->
+            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+        </head>
+        <body class="hold-transition layout-top-nav bg-light">
+            <div class="wrapper">
+                <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+                    <div class="container">
+                        <a class="navbar-brand">
+                            <span class="brand-text font-weight-light">Setup Camera</span>
+                        </a>
+                        <a href="{{ url_for('logout') }}" class="navbar-link float-right">
+                            <span class="brand-text font-weight-light">Logout</span>
+                        </a>
+                    </div>
+                </nav>
+
+                <div class="content-wrapper">
+                    <div class="content-header">
+                        <div class="container">
+                            <div class="row mb-2">
+                                <div class="col-sm-auto">
+                                    <ol class="breadcrumb float-sm-left">
+                                        <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Live</a></li>
+                                        <li class="breadcrumb-item active"><strong>Setup</strong></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="card card-primary card-outline">
+                                        <div class="card-body">
+                                            <div class="nav flex-column nav-pills" aria-orientation="vertical">
+                                                <a class="nav-link active" aria-selected="true">Source Camera</a>
+                                                <a class="nav-link" href="{{ url_for('zone') }}" aria-selected="false">Config Zone</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="card card-primary card-outline">
+                                        <div class="card-body">
+                                            <form method="POST" id="form" action="/setup/addcam">
+                                                <div class="form-group">
+                                                    <label for="cameraname">Camera Name</label>
+                                                    <input type="text" class="form-control" id="cameraname" placeholder="Enter Camera Name" name="camera_name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="cameraid">Camera ID</label>
+                                                    <input type="text" class="form-control" id="cameraid" placeholder="Enter Camera ID" name="camera_id">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="cameralink">Camera Link</label>
+                                                    <input type="text" class="form-control" id="cameralink" placeholder="Enter Camera Link" name="camera_link">
+                                                </div>
+                                                <input type='submit' name="submit_button" value="Add" class="btn btn-primary">
+                                                <input type='submit' name="submit_button" value="Check" class="btn btn-primary">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>

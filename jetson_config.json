@@ -1,0 +1,7 @@
+{
+    "jetson_user": "admin",
+    "jetson_pass": "admin123",
+    "link_images": "~/jetson/image.jpg",
+    "camera_file": "~/jetson/camera_info.json",
+    "zone_info": "~/jetson/zone_info.json"
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Live</title>
+            <!-- Font Awesome -->
+            <link rel="stylesheet" href="{{ url_for('static', filename='main/plugins/fontawesome-free/css/all.min.css') }}">
+            <!-- Theme style -->
+            <link rel="stylesheet" href="{{ url_for('static', filename='main/dist/css/adminlte.min.css') }}">
+            <!-- Google Font: Source Sans Pro -->
+            <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+        </head>
+        <body class="hold-transition layout-top-nav">
+            <div class="wrapper">
+                <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+                    <div class="container">
+                        <a class="navbar-brand">
+                            <span class="brand-text font-weight-light">Live</span>
+                        </a>
+                        <a href="{{ url_for('logout') }}" class="navbar-link float-right">
+                            <span class="brand-text font-weight-light">Logout</span>
+                        </a>
+                    </div>
+                </nav>
+
+                <div class="content-wrapper">
+                    <div class="content-header">
+                        <div class="container">
+                            <div class="row mb-2">
+                                <div class="col-sm-auto">
+                                    <ol class="breadcrumb float-sm-left">
+                                        <li class="breadcrumb-item active"><strong>Live</strong></li>
+                                        <li class="breadcrumb-item"><a href="{{ url_for('setup') }}">Setup</a></li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card card-primary card-outline">
+                                        <div class="card-body">
+                                            <img class="img-fluid container" width="640" height="480" src="{{ url_for('video_feed') }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- jQuery -->
+            <script src="{{ url_for('static', filename='main/plugins/jquery/jquery.min.js') }}"></script>
+            <!-- Bootstrap 4 -->
+            <script src="{{ url_for('static', filename='main/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+            <!-- AdminLTE App -->
+            <script src="{{ url_for('static', filename='main/dist/js/adminlte.min.js') }}"></script>
+        </body>
+    </html>
