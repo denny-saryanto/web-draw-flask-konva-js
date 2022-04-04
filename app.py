@@ -160,5 +160,5 @@ def logout_asd():
 	return redirect(url_for('login'))
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, port=5556)
+    app.run(debug=True, port=33507)
 
