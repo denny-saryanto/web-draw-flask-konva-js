@@ -3,4 +3,5 @@ gunicorn
 python-dotenv
 imutils
 opencv-python
+opencv-python-headless==4.2.0.32
 opencv-contrib-python
