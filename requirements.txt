@@ -1,0 +1,5 @@
+flask
+gunicorn
+python-dotenv
+imutils
+opencv-python
